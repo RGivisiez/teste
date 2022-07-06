@@ -15,6 +15,8 @@
  *=============================================================================
  */
 
+ import * as tf from '@tensorflow/tfjs';
+
  const video = document.getElementById('webcam');
  const liveView = document.getElementById('liveView');
  const demosSection = document.getElementById('demos');
