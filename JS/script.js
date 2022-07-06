@@ -22,7 +22,7 @@
  
  async function tensorFlow(){
         
-  const a = await tf.loadLayersModel('https://raw.githubusercontent.com/RGivisiez/teste/main/tf_js/model.json');
+  const a = await tf.loadGraphModel('https://raw.githubusercontent.com/RGivisiez/teste/main/tf_js/model.json');
   console.log(a.summary());
   
   // const b = await tf.loadLayersModel('https://github.com/dkreider/tensorflowjs-cat-vs-dog/blob/master/trained-model/model.json');    
@@ -77,11 +77,11 @@ tensorFlow();
  // to get everything needed to run.
  // Note: cocoSsd is an external object loaded from our index.html
  // script tag import so ignore any warning in Glitch.
- cocoSsd.load().then(function (loadedModel) {
-   model = loadedModel;
-   // Show demo section now model is ready to use.
-   demosSection.classList.remove('invisible');
- });
+//  cocoSsd.load().then(function (loadedModel) {
+//    model = loadedModel;
+//    // Show demo section now model is ready to use.
+//    demosSection.classList.remove('invisible');
+//  });
 
  var children = [];
  
