@@ -22,7 +22,7 @@
  
  async function tensorFlow(){
         
-  const a = await tf.loadLayersModel('https://raw.githubusercontent.com/RGivisiez/teste/main/tf_js/model.json');
+  const a = await tf.loadLayersModel('https://raw.githubusercontent.com/dkreider/tensorflowjs-cat-vs-dog/master/trained-model/model.json');
   console.log(a.summary());
   
   // const b = await tf.loadLayersModel('https://github.com/dkreider/tensorflowjs-cat-vs-dog/blob/master/trained-model/model.json');    
