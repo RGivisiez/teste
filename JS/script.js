@@ -27,8 +27,8 @@
   const a = await tf.loadLayersModel('https://raw.githubusercontent.com/dkreider/tensorflowjs-cat-vs-dog/master/trained-model/model.json');
   console.log(a.summary());
   
-  const b = await tf.loadLayersModel('https://github.com/dkreider/tensorflowjs-cat-vs-dog/blob/master/trained-model/model.json');    
-  console.log(b.summary());
+  // const b = await tf.loadLayersModel('https://github.com/dkreider/tensorflowjs-cat-vs-dog/blob/master/trained-model/model.json');    
+  // console.log(b.summary());
 
 }
 
@@ -81,7 +81,6 @@ tensorFlow();
  // script tag import so ignore any warning in Glitch.
  cocoSsd.load().then(function (loadedModel) {
    model = loadedModel;
-   console.log(model.summary());
    // Show demo section now model is ready to use.
    demosSection.classList.remove('invisible');
  });
