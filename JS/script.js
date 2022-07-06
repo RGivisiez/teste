@@ -35,6 +35,15 @@
    console.warn('getUserMedia() is not supported by your browser');
  }
  
+ //Load from GitHub File
+ async function load_model2() {
+    // It's possible to load the model locally or from a repo
+    // You can choose whatever IP and PORT you want in the "http://127.0.0.1:8080/model.json" just set it before in your https server
+    //const model = await loadGraphModel("http://127.0.0.1:8080/model.json");
+    const model = await loadGraphModel("https://raw.githubusercontent.com/hugozanini/TFJS-object-detection/master/models/kangaroo-detector/model.json");
+    return model;
+  }
+
  // Enable the live webcam view and start classification.
  function enableCam(event) {
    // Only continue if the COCO-SSD has finished loading.
@@ -65,11 +74,13 @@
  // to get everything needed to run.
  // Note: cocoSsd is an external object loaded from our index.html
  // script tag import so ignore any warning in Glitch.
- cocoSsd.load().then(function (loadedModel) {
-   model = loadedModel;
-   // Show demo section now model is ready to use.
-   demosSection.classList.remove('invisible');
- });
+//  cocoSsd.load().then(function (loadedModel) {
+//    model = loadedModel;
+//    // Show demo section now model is ready to use.
+//    demosSection.classList.remove('invisible');
+//  });
+
+ model = load_model2();
  
  var children = [];
  
