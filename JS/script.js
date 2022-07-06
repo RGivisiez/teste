@@ -15,7 +15,8 @@
  *=============================================================================
  */
 
- import * as tf from "@tensorflow/tfjs"
+ import * as tf from '@tensorflow/tfjs';
+ import {loadGraphModel} from '@tensorflow/tfjs-converter';
 
  const video = document.getElementById('webcam');
  const liveView = document.getElementById('liveView');
@@ -82,7 +83,7 @@
 //    demosSection.classList.remove('invisible');
 //  });
 
- model = load_model2();
+ const model = load_model2();
  
  var children = [];
  
