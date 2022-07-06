@@ -81,7 +81,7 @@
 //    demosSection.classList.remove('invisible');
 //  });
 
- const model = load_model2();
+ model = load_model2();
  
  var children = [];
  
